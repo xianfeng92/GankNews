@@ -6,11 +6,13 @@ import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -39,6 +41,7 @@ import static com.jess.arms.utils.Preconditions.checkNotNull;
 
 
 public class ArticleFragment extends BaseFragment<ArticlePresenter> implements ArticleContract.View , SwipeRefreshLayout.OnRefreshListener{
+    private static final String TAG = "ArticleFragment";
 
     @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
@@ -72,7 +75,6 @@ public class ArticleFragment extends BaseFragment<ArticlePresenter> implements A
     public void initData(Bundle savedInstanceState) {
         mSwipeRefreshLayout.setOnRefreshListener(this);
         ArmsUtils.configRecycleView(mRecyclerView, new LinearLayoutManager(getActivity()));
-
         mAdapter = new ArticleAdapter(null);
         mAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_BOTTOM);
         mAdapter.setOnItemClickListener((adapter, view, position) -> {
