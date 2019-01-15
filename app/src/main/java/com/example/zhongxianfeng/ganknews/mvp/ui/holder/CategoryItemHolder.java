@@ -12,9 +12,6 @@ import com.jess.arms.base.BaseHolder;
 
 import butterknife.BindView;
 
-/**
- * Created by Administrator on 2017/7/5.
- */
 
 public class CategoryItemHolder extends BaseHolder<GankEntity.ResultsBean> {
 
@@ -38,12 +35,11 @@ public class CategoryItemHolder extends BaseHolder<GankEntity.ResultsBean> {
         tvAuthor.setText(data.who);
         tvDesc.setText(data.desc);
         if (data.type.equals(CategoryType.ANDROID_STR)){
-            ivImage.setImageResource(R.mipmap.icon_android);
-        }else  if (data.type.equals(CategoryType.IOS_STR)){
-            ivImage.setImageResource(R.mipmap.icon_apple);
+            ivImage.setImageResource(R.mipmap.android);
         }else  if (data.type.equals(CategoryType.QIAN_STR)){
             ivImage.setImageResource(R.mipmap.html);
+        }else  if (data.type.equals(CategoryType.EXPAND_STR)){
+            ivImage.setImageResource(R.mipmap.expand);
         }
     }
-
 }

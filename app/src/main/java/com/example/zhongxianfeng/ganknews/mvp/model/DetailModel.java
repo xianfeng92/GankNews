@@ -1,7 +1,6 @@
 package com.example.zhongxianfeng.ganknews.mvp.model;
 
 import android.app.Application;
-
 import com.example.zhongxianfeng.ganknews.app.GreenDaoHelper;
 import com.example.zhongxianfeng.ganknews.app.greendao.DaoGankEntityDao;
 import com.example.zhongxianfeng.ganknews.mvp.contract.DetailContract;
@@ -15,9 +14,7 @@ import com.jess.arms.mvp.BaseModel;
 
 
 import java.util.List;
-
 import javax.inject.Inject;
-
 import io.reactivex.Observable;
 
 
@@ -67,6 +64,4 @@ public class DetailModel extends BaseModel implements DetailContract.Model {
     public void addGankEntity(DaoGankEntity entity) {
         GreenDaoHelper.getDaoSession().getDaoGankEntityDao().insert(entity);
     }
-
-
 }

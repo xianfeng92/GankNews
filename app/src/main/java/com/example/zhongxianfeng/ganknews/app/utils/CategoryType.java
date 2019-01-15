@@ -4,8 +4,8 @@ package com.example.zhongxianfeng.ganknews.app.utils;
 public class CategoryType {
 
     public static final String ANDROID_STR = "Android";
-    public static final String IOS_STR = "iOS";
     public static final String QIAN_STR = "前端";
+    public static final String EXPAND_STR = "拓展资源";
     public static final String GIRLS_STR = "福利";
 
 
@@ -16,12 +16,11 @@ public class CategoryType {
         if (position == 0){
             return ANDROID_STR;
         } else if (position == 1){
-            return IOS_STR;
-        } else if (position == 2){
             return QIAN_STR;
+        } else if (position == 2){
+            return EXPAND_STR;
         } else {
             return "";
         }
     }
-
 }

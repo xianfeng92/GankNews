@@ -9,7 +9,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.zhongxianfeng.ganknews.R;
 import com.example.zhongxianfeng.ganknews.app.base.BaseFragment;
 import com.example.zhongxianfeng.ganknews.app.utils.CategoryType;
@@ -61,8 +60,8 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements HomeCon
         if (mFragments == null) {
             mFragments = new ArrayList<>();
             mFragments.add(CategoryFragment.newInstance(CategoryType.ANDROID_STR));
-            mFragments.add(CategoryFragment.newInstance(CategoryType.IOS_STR));
             mFragments.add(CategoryFragment.newInstance(CategoryType.QIAN_STR));
+            mFragments.add(CategoryFragment.newInstance(CategoryType.EXPAND_STR));
         }
         mainPager.setOffscreenPageLimit(mFragments.size());
         mainPager.setAdapter(new MianViewPagerAdapter(getChildFragmentManager(),mFragments));

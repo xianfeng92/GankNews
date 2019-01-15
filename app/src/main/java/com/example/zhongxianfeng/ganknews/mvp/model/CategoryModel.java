@@ -21,6 +21,7 @@ public class CategoryModel extends BaseModel implements CategoryContract.Model {
     private Gson mGson;
     private Application mApplication;
     public static final int USERS_PER_PAGESIZE = 10;
+
     @Inject
     public CategoryModel(IRepositoryManager repositoryManager, Gson gson, Application application) {
         super(repositoryManager);

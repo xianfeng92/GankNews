@@ -146,6 +146,7 @@ public class CategoryFragment extends BaseFragment<CategoryPresenter> implements
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnItemClickListener((View view, int viewType, Object data, int position) -> {
             GankEntity.ResultsBean bean = (GankEntity.ResultsBean) data;
+            // 通过ARouter路由跳转到DetailActivity，并将ResultsBean传到DetailActivity
             ARouter.getInstance().build(MAIN_DETAIL)
                     .withSerializable(EXTRA_DETAIL, bean)
                     .navigation();

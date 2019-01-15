@@ -23,10 +23,10 @@ public class ArticleAdapter extends BaseQuickAdapter<DaoGankEntity,BaseViewHolde
         helper.setText(R.id.tvDesc, item.desc);
         ImageView ivImage = helper.getView(R.id.ivImage);
         if (item.type.equals(CategoryType.ANDROID_STR)){
-            ivImage.setImageResource(R.mipmap.icon_android);
-        }else if (item.type.equals(CategoryType.IOS_STR)){
-            ivImage.setImageResource(R.mipmap.icon_apple);
+            ivImage.setImageResource(R.mipmap.android);
         }else if (item.type.equals(CategoryType.QIAN_STR)){
+            ivImage.setImageResource(R.mipmap.html);
+        }else if (item.type.equals(CategoryType.EXPAND_STR)){
             ivImage.setImageResource(R.mipmap.html);
         }
     }
