@@ -10,16 +10,13 @@
     app:contentInsetStart="0dp"
     app:titleMarginStart="20dp"
     app:layout_scrollFlags="scroll|enterAlways"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-    >
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
     <RelativeLayout
         android:id="@+id/toolbar_back"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="left"
-        >
-
+        android:gravity="left">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +24,6 @@
             android:layout_marginRight="10dp"
             android:layout_centerVertical="true"
             android:src="@mipmap/ic_arrow_back_white_24dp"/>
-
     </RelativeLayout>
 
     <TextView
@@ -38,8 +34,5 @@
         android:textColor="#fff"
         android:layout_gravity="center"
         tools:text="MVPArt"/>
-
-
-
 
 </android.support.v7.widget.Toolbar>

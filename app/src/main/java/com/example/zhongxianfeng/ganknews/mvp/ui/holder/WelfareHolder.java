@@ -7,9 +7,6 @@ import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.http.imageloader.ImageLoader;
 import com.jess.arms.utils.ArmsUtils;
 
-/**
- * Created by Administrator on 2017/7/6.
- */
 
 public class WelfareHolder extends BaseViewHolder {
 

@@ -18,7 +18,5 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         app:bb_tabXmlResource="@xml/bottombar_tabs"
-        android:layout_gravity="bottom"
-        />
-
+        android:layout_gravity="bottom"/>
 </LinearLayout>

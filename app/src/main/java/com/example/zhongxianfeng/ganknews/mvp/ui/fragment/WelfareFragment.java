@@ -76,25 +76,14 @@ public class WelfareFragment extends BaseFragment<WelfarePresenter> implements W
     @Override
     public void initData(Bundle savedInstanceState) {
         mSwipeRefreshLayout.setOnRefreshListener(this);
-//        ArmsUtils.configRecycleView(mRecyclerView, new LinearLayoutManager(getActivity()));
         PagerSnapHelper pagerSnapHelper = new PagerSnapHelper();
         pagerSnapHelper.attachToRecyclerView(mRecyclerView);
         mAdapter = new WelfareAdapter(null);
-//        mAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_BOTTOM);
-//        mAdapter.setOnLoadMoreListener(()->mPresenter.requestData(false), mRecyclerView);
-//        mAdapter.setOnItemClickListener((adapter, view, position) -> {
-//            System.arraycopy(mHits, 1, mHits, 0, mHits.length - 1);
-//            mHits[mHits.length - 1] = SystemClock.uptimeMillis();
-//            if (mHits[0] >= (SystemClock.uptimeMillis() - 500)) {
-//                collectWelfare(adapter,view,position);
-//            }
-//        });
+        mAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
         TextView textView = new TextView(getContext());
         textView.setText("没有更多内容了");
         textView.setGravity(Gravity.CENTER);
-//        mAdapter.setEmptyView(textView);
         mRecyclerView.setAdapter(mAdapter);
-
     }
 
     private void collectWelfare(BaseQuickAdapter adapter, View view, int position) {

@@ -17,7 +17,7 @@
         android:icon="@mipmap/app_news"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/MyAppTheme"
+        android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".mvp.ui.activity.MainActivity">
             <intent-filter>

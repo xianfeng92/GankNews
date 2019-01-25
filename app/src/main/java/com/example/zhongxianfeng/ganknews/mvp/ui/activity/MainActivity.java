@@ -7,7 +7,6 @@ import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.RelativeLayout;
@@ -47,6 +46,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
     BottomBar mBottomBar;
     @BindView(R.id.toolbar_back)
     RelativeLayout toolbarBack;
+
     private RxPermissions mRxPermissions;
     private List<Integer> mTitles;
     private List<Fragment> mFragments;
